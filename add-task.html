@@ -26,42 +26,52 @@
 
 			<form class="add-task-form">
 				<div class="form-field">
-					<label class="form-field__label">Name</label>
-					<input type="text" class="form-field__input" />
+					<label class="form-field__label">Name<span class="red-text">*</span></label>
+					<input type="text" class="form-field__input" id="name" />
+					<p class="form-field-error" id="name-error"></p>
 				</div>
 
 				<div class="form-field">
-					<label class="form-field__label">Description</label>
-					<textarea class="form-field__input" rows="4"></textarea>
+					<label class="form-field__label">Description<span class="red-text">*</span></label>
+					<textarea class="form-field__input" rows="4" id="description"></textarea>
+					<p class="form-field-error" id="description-error"></p>
 				</div>
 
 				<div class="form-field">
-					<label class="form-field__label">Priority</label>
-					<select class="form-field__input">
+					<label class="form-field__label">Priority<span class="red-text">*</span></label>
+					<select class="form-field__input" id="priority">
+						<option class="form-field__input-option" value="">Select a priority</option>
 						<option class="form-field__input-option" value="low">Low</option>
 						<option class="form-field__input-option" value="medium">Medium</option>
 						<option class="form-field__input-option" value="high">High</option>
 					</select>
+					<p class="form-field-error" id="priority-error"></p>
 				</div>
 
 				<div class="form-field">
-					<label class="form-field__label">Accountable</label>
-					<select class="form-field__input">
+					<label class="form-field__label">Accountable<span class="red-text">*</span></label>
+					<select class="form-field__input" id="accountable">
+						<option class="form-field__input-option" value="">Select a person who is accountable for this
+							task</option>
 						<option class="form-field__input-option" value="Lionel Messi">Lionel Messi</option>
 						<option class="form-field__input-option" value="Cristiano Ronaldo">Cristiano Ronaldo</option>
 						<option class="form-field__input-option" value="Neymar">Neymar</option>
 						<option class="form-field__input-option" value="KylianMbappe">KylianMbappe</option>
 					</select>
+					<p class="form-field-error" id="accountable-error"></p>
 				</div>
 
 				<div class="form-field">
-					<label class="form-field__label">Responsible</label>
-					<select class="form-field__input">
+					<label class="form-field__label">Responsible<span class="red-text">*</span></label>
+					<select class="form-field__input" id="responsible">
+						<option class="form-field__input-option" value="">Select a person who is responsible for this
+							task</option>
 						<option class="form-field__input-option" value="Lionel Messi">Lionel Messi</option>
 						<option class="form-field__input-option" value="Cristiano Ronaldo">Cristiano Ronaldo</option>
 						<option class="form-field__input-option" value="Neymar">Neymar</option>
 						<option class="form-field__input-option" value="KylianMbappe">KylianMbappe</option>
 					</select>
+					<p class="form-field-error" id="responsible-error"></p>
 				</div>
 
 				<div class="task__buttons">
@@ -72,7 +82,7 @@
 	</main>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-	<script src="./js/add-task.js"></script>
+	<script src="./js/add-task.js" type="module"></script>
 </body>
 
 </html>
