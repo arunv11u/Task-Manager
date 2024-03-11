@@ -205,6 +205,21 @@ body {
 	padding: 30px;
 }
 
+.task--high-priority {
+	color: rgb(187, 9, 9);
+	font-weight: bold;
+}
+
+.task--medium-priority {
+	color: rgb(143, 96, 8);
+	font-weight: bold;
+}
+
+.task--low-priority {
+	color: rgb(7, 7, 103);
+	font-weight: bold;
+}
+
 .form-field-error,
 .red-text {
 	color: red;
