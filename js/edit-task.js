@@ -141,7 +141,7 @@ $(() => {
 		location.href = "../index.html";
 	});
 
-	$("#back").on("click", () => {
-		location.href = "../index.html";
+	$("#back-to-home-page").on("click", () => {
+		location.href = `./index.html`;
 	});
 });
