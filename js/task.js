@@ -81,13 +81,10 @@ class Task {
 
 		const tasks = localStorage.getItem(tasksItemName) || [];
 
-		const tasksCount = localStorage.getItem(tasksCountItemName) || 0;
-
 		const taskIndex = tasks.findIndex(task => task.id === id);
 		tasks.splice(taskIndex, 1);
 
 		localStorage.setItem(tasksItemName, tasks);
-		localStorage.setItem(tasksCountItemName, tasksCount - 1);
 	}
 }
 

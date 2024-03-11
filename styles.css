@@ -189,6 +189,7 @@ body {
 	color: black;
 	width: 100%;
 	height: 100vh;
+	top:0;
 	background-color: rgb(0,0,0, 0.5);
 	justify-content: center;
 	align-items: center;
@@ -203,6 +204,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	padding: 30px;
+	border-radius: 5px;
 }
 
 .task--high-priority {
@@ -223,4 +225,18 @@ body {
 .form-field-error,
 .red-text {
 	color: red;
+}
+
+@media only screen and (max-width: 600px) {
+	.add-task-form {
+		width: 80%;
+	}
+
+	.button {
+		width: 80px;
+	}
+
+	.modal-content {
+		width: 320px;
+	}
 }
