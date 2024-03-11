@@ -37,11 +37,20 @@ class Task {
 		localStorage.setItem(tasksItemName, tasks);
 	}
 
+	get(id) {
+		const localStorage = new LocalStorage();
+
+		const tasks = localStorage.getItem(tasksItemName) || [];
+		const task = tasks.find(task => task.id === id);
+
+		return task;
+	}
+
 	update(id) {
 		const localStorage = new LocalStorage();
 
 		const tasks = localStorage.getItem(tasksItemName) || [];
-		const taskIndex = tasks.find(task => task.id === id);
+		const taskIndex = tasks.findIndex(task => task.id === id);
 
 		const updatedtask = {
 			id: id,
