@@ -56,8 +56,12 @@ $(() => {
 
 			$("#responsible-error").text("");
 		} catch (error) {
-			$("#responsible-error").text(error.message)
+			$("#responsible-error").text(error.message);
 		}
+	});
+
+	$("#back-to-home-page").on("click", () => {
+		location.href = `./index.html`;
 	});
 
 	$("#create-task").on("click", () => {
