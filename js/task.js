@@ -77,28 +77,17 @@ class Task {
 	}
 
 	delete(id) {
-		// console.log(id);
-		// const localStorage = new LocalStorage();
+		const localStorage = new LocalStorage();
 
-		// const tasks = localStorage.getItem(tasksItemName) || [];
+		const tasks = localStorage.getItem(tasksItemName) || [];
 
-		// const tasksCount = localStorage.getItem(tasksCountItemName) || 0;
+		const tasksCount = localStorage.getItem(tasksCountItemName) || 0;
 
-		// const taskIndex = tasks.findIndex(task => task.id === id);
+		const taskIndex = tasks.findIndex(task => task.id === id);
+		tasks.splice(taskIndex, 1);
 
-		// tasks.splice(taskIndex, 1);
-		// console.log(tasksItemName, tasks, tasksCount, taskIndex);
-		// localStorage.setItem(tasksCountItemName, tasksCount - 1);
-
-		let tasks;
-		tasks = JSON.parse(localStorage.getItem('tasks'));
-		tasks.forEach(function (task) {
-			if (task.id === id) {
-				tasks.splice(tasks.indexOf(task), 1);
-			}
-		});
-		localStorage.setItem('tasks', JSON.stringify(tasks));
-
+		localStorage.setItem(tasksItemName, tasks);
+		localStorage.setItem(tasksCountItemName, tasksCount - 1);
 	}
 }
 
