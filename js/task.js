@@ -1,6 +1,7 @@
 import { LocalStorage } from "./local-storage.js";
 
 const tasksItemName = "tasks";
+const tasksCountItemName = "tasksCount";
 
 class Task {
 
@@ -22,7 +23,8 @@ class Task {
 		const localStorage = new LocalStorage();
 
 		const tasks = localStorage.getItem(tasksItemName) || [];
-		const id = tasks.length + 1;
+		const tasksCount = localStorage.getItem(tasksCountItemName) || 0;
+		const id = tasksCount + 1;
 
 		const task = {
 			id: id,
@@ -35,6 +37,7 @@ class Task {
 		tasks.push(task);
 
 		localStorage.setItem(tasksItemName, tasks);
+		localStorage.setItem(tasksCountItemName, tasksCount + 1);
 	}
 
 	get(id) {
@@ -63,6 +66,19 @@ class Task {
 		tasks[taskIndex] = updatedtask;
 
 		localStorage.setItem(tasksItemName, tasks);
+	}
+
+	delete(id) {
+		const localStorage = new LocalStorage();
+
+		const tasks = localStorage.getItem(tasksItemName) || [];
+		const tasksCount = localStorage.getItem(tasksCountItemName) || 0;
+
+		const taskIndex = tasks.findIndex(task => task.id === id);
+
+		tasks.splice(taskIndex, 1);
+
+		localStorage.setItem(tasksCountItemName, tasksCount - 1);
 	}
 }
 
