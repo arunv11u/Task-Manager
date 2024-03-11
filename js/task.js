@@ -40,6 +40,14 @@ class Task {
 		localStorage.setItem(tasksCountItemName, tasksCount + 1);
 	}
 
+	static getAll() {
+		const localStorage = new LocalStorage();
+
+		const tasks = localStorage.getItem(tasksItemName) || [];
+
+		return tasks;
+	}
+
 	get(id) {
 		const localStorage = new LocalStorage();
 

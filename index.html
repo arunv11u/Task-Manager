@@ -31,11 +31,11 @@
 				</div>
 			</div>
 
-			<!-- <div id="no-tasks" class="task-card__no-tasks">
+			<div id="no-tasks" class="task-card__no-tasks">
 				<img src="./assets/images/no-task.png" height="200px"/>
-			</div> -->
+			</div>
 
-			<div class="task-card__tasks-list">
+			<div class="task-card__tasks-list" id="tasks-list">
 				<table id="tasks" class="task-card__tasks">
 					<tr class="task-card__headers">
 						<th class="task-card__task-header">Name</th>
@@ -44,29 +44,13 @@
 						<th class="task-card__task-header">Accountable</th>
 						<th class="task-card__task-header">Responsible</th>
 					</tr>
-
-					<tr class="task-card__task" onclick="editTask(1)">
-						<td class="task-card__task-item">Birthday Reminder</td>
-						<td class="task-card__task-item">Lorem ipsum dolor sit amet, co...</td>
-						<td class="task-card__task-item">High</td>
-						<td class="task-card__task-item">Lionel Messi</td>
-						<td class="task-card__task-item">Cristiano Ronaldo</td>
-					</tr>
-
-					<tr class="task-card__task" onclick="editTask(2)">
-						<td class="task-card__task-item">Birthday Reminder</td>
-						<td class="task-card__task-item">Lorem ipsum dolor sit amet, co...</td>
-						<td class="task-card__task-item">Low</td>
-						<td class="task-card__task-item">Neymar</td>
-						<td class="task-card__task-item">KylianMbappe</td>
-					</tr>
 				</table>
 			</div>
 		</div>
 	</main>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-	<script src="./js/tasks-list.js"></script>
+	<script src="./js/list-tasks.js" type="module"></script>
 </body>
 
 </html>
