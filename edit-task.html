@@ -38,44 +38,50 @@
 			<form class="add-task-form">
 				<div class="form-field">
 					<label class="form-field__label">Name</label>
-					<input type="text" class="form-field__input" />
+					<input type="text" class="form-field__input" id="name" />
+					<p class="form-field-error" id="name-error"></p>
 				</div>
 
 				<div class="form-field">
 					<label class="form-field__label">Description</label>
-					<textarea class="form-field__input" rows="4"></textarea>
+					<textarea class="form-field__input" rows="4" id="description"></textarea>
+					<p class="form-field-error" id="description-error"></p>
 				</div>
 
 				<div class="form-field">
 					<label class="form-field__label">Priority</label>
-					<select class="form-field__input">
+					<select class="form-field__input" id="priority">
 						<option class="form-field__input-option" value="LOW">Low</option>
 						<option class="form-field__input-option" value="MEDIUM">Medium</option>
 						<option class="form-field__input-option" value="HIGH">High</option>
 					</select>
+					<p class="form-field-error" id="priority-error"></p>
 				</div>
 
 				<div class="form-field">
 					<label class="form-field__label">Accountable</label>
-					<select class="form-field__input">
+					<select class="form-field__input" id="accountable">
 						<option class="form-field__input-option" value="Lionel Messi">Lionel Messi</option>
 						<option class="form-field__input-option" value="Cristiano Ronaldo">Cristiano Ronaldo</option>
 						<option class="form-field__input-option" value="Neymar">Neymar</option>
 						<option class="form-field__input-option" value="Kylian Mbappe">Kylian Mbappe</option>
 					</select>
+					<p class="form-field-error" id="accountable-error"></p>
 				</div>
 
 				<div class="form-field">
 					<label class="form-field__label">Responsible</label>
-					<select class="form-field__input">
+					<select class="form-field__input" id="responsible">
 						<option class="form-field__input-option" value="Lionel Messi">Lionel Messi</option>
 						<option class="form-field__input-option" value="Cristiano Ronaldo">Cristiano Ronaldo</option>
 						<option class="form-field__input-option" value="Neymar">Neymar</option>
 						<option class="form-field__input-option" value="Kylian Mbappe">Kylian Mbappe</option>
 					</select>
+					<p class="form-field-error" id="responsible-error"></p>
 				</div>
 
 				<div class="task__buttons">
+					<button type="button" class="button button--medium-dark" id="back">Back</button>
 					<button type="button" class="button button--medium-dark" id="delete-task">Delete</button>
 					<button type="button" class="button button--dark" id="update-task">Update</button>
 				</div>
