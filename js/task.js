@@ -36,6 +36,25 @@ class Task {
 
 		localStorage.setItem(tasksItemName, tasks);
 	}
+
+	update(id) {
+		const localStorage = new LocalStorage();
+
+		const tasks = localStorage.getItem(tasksItemName) || [];
+		const taskIndex = tasks.find(task => task.id === id);
+
+		const updatedtask = {
+			id: id,
+			name: this.name,
+			description: this.description,
+			priority: this.priority,
+			accountable: this.accountable,
+			responsible: this.responsible
+		};
+		tasks[taskIndex] = updatedtask;
+
+		localStorage.setItem(tasksItemName, tasks);
+	}
 }
 
 function validateTaskName(name) {
