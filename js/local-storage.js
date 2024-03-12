@@ -1,17 +1,20 @@
-
-
+// Class for interacting with local storage
 class LocalStorage {
 
-	getItem(key) {
-		return JSON.parse(localStorage.getItem(key));
-	}
+    // Method to retrieve item from local storage by key
+    getItem(key) {
+        // Parsing the retrieved item as JSON and returning it
+        return JSON.parse(localStorage.getItem(key));
+    }
 
-	setItem(key, value) {
-		localStorage.setItem(key, JSON.stringify(value));
-	}
+    // Method to set an item in local storage with a key-value pair
+    setItem(key, value) {
+        // Stringifying the value as JSON and storing it with the given key
+        localStorage.setItem(key, JSON.stringify(value));
+    }
 }
 
-
+// Exporting the LocalStorage class
 export {
-	LocalStorage
+    LocalStorage
 };
