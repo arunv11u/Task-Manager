@@ -14,9 +14,9 @@ $(() => {
 		try {
 			validateTaskName($("#name").val());
 
-			$("#name-error").text("");
+			$("#name-error").css("display", "none");
 		} catch (error) {
-			$("#name-error").text(error.message)
+			$("#name-error").css("display", "block").text(error.message)
 		}
 	});
 
@@ -24,9 +24,9 @@ $(() => {
 		try {
 			validateTaskDescription($("#description").val());
 
-			$("#description-error").text("")
+			$("#description-error").css("display", "none").text("")
 		} catch (error) {
-			$("#description-error").text(error.message)
+			$("#description-error").css("display", "block").text(error.message)
 		}
 	});
 
@@ -34,9 +34,9 @@ $(() => {
 		try {
 			validateTaskPriority($("#priority").val());
 
-			$("#priority-error").text("");
+			$("#priority-error").css("display", "none").text("");
 		} catch (error) {
-			$("#priority-error").text(error.message)
+			$("#priority-error").css("display", "block").text(error.message)
 		}
 	});
 
@@ -44,9 +44,9 @@ $(() => {
 		try {
 			validateTaskAccountable($("#accountable").val());
 
-			$("#accountable-error").text("");
+			$("#accountable-error").css("display", "none").text("");
 		} catch (error) {
-			$("#accountable-error").text(error.message)
+			$("#accountable-error").css("display", "block").text(error.message)
 		}
 	});
 
@@ -54,9 +54,9 @@ $(() => {
 		try {
 			validateTaskResponsible($("#responsible").val());
 
-			$("#responsible-error").text("");
+			$("#responsible-error").css("display", "none").text("");
 		} catch (error) {
-			$("#responsible-error").text(error.message);
+			$("#responsible-error").css("display", "block").text(error.message);
 		}
 	});
 
@@ -77,51 +77,51 @@ $(() => {
 		try {
 			validateTaskName(name);
 
-			$("#name-error").text("");
+			$("#name-error").css("display", "none").text("");
 		} catch (error) {
 			isInvalidAddTaskForm = true;
 
-			$("#name-error").text(error.message)
+			$("#name-error").css("display", "block").text(error.message)
 		}
 
 		try {
 			validateTaskDescription(description);
 
-			$("#description-error").text("");
+			$("#description-error").css("display", "none").text("");
 		} catch (error) {
 			isInvalidAddTaskForm = true;
 
-			$("#description-error").text(error.message);
+			$("#description-error").css("display", "block").text(error.message);
 		}
 
 		try {
 			validateTaskPriority(priority);
 
-			$("#priority-error").text("");
+			$("#priority-error").css("display", "none").text("");
 		} catch (error) {
 			isInvalidAddTaskForm = true;
 
-			$("#priority-error").text(error.message);
+			$("#priority-error").css("display", "block").text(error.message);
 		}
 
 		try {
 			validateTaskAccountable(accountable);
 
-			$("#accountable-error").text("");
+			$("#accountable-error").css("display", "none").text("");
 		} catch (error) {
 			isInvalidAddTaskForm = true;
 
-			$("#accountable-error").text(error.message);
+			$("#accountable-error").css("display", "block").text(error.message);
 		}
 
 		try {
 			validateTaskResponsible(responsible);
 
-			$("#responsible-error").text("");
+			$("#responsible-error").css("display", "none").text("");
 		} catch (error) {
 			isInvalidAddTaskForm = true;
 
-			$("#responsible-error").text(error.message);
+			$("#responsible-error").css("display", "block").text(error.message);
 		}
 
 		if (isInvalidAddTaskForm) return;

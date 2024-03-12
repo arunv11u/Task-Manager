@@ -81,15 +81,20 @@ body {
 }
 
 .form-field__input {
-	margin-top: 3px;
 	line-height: 1.2rem;
 	border: 1px solid rgb(31, 38, 49);
 	border-radius: 3px;
 	padding: 5px;
+	min-height: 35px;
 }
 
 .form-field__input option {
 	padding: 10px;
+}
+
+.form-field-error {
+	display: none;
+	margin: 8px 0;
 }
 
 .button {
@@ -99,6 +104,7 @@ body {
 	border: 1px solid rgb(31, 38, 49);
 	font-weight: bold;
 	cursor: pointer;
+	height: 35px;
 }
 
 .button--dark,
@@ -225,6 +231,21 @@ body {
 .form-field-error,
 .red-text {
 	color: red;
+}
+
+.search-task {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.search-task__field {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	min-height: 50px;
+	justify-content: space-around;
 }
 
 @media only screen and (max-width: 600px) {
