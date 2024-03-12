@@ -140,7 +140,6 @@ body {
 }
 
 .task-card__buttons {
-	/* width: 270px; */
 	display: flex;
 	justify-content: flex-end;
 }
