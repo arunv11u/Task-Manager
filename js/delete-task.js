@@ -4,7 +4,7 @@ import { Task } from "./task.js";
 // jQuery ready function
 $(() => {
 	// Event listener for the delete task button
-	$("#delete-task").on("click", () => {
+	$(".delete-task").on("click", () => {
 		// Displays the modal by setting its display property to flex
 		$("#modal").css("display", "flex");
 	});
