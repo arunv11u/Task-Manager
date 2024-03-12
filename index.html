@@ -9,6 +9,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	<link rel="stylesheet" href="styles.css">
 </head>
@@ -31,21 +34,26 @@
 			</div>
 
 			<div id="no-tasks" class="task-card__no-tasks">
-				<img src="./assets/images/no-task.png" height="200px"/>
+				<div>
+					<img src="./assets/images/no-task.png" height="200px" />
+					<h3>No tasks added.</h3>
+				</div>
 			</div>
 
 			<div class="task-card__tasks-list" id="tasks-list">
 				<div class="search-task">
+					<h3>Search:</h3>
 					<div class="search-task__field">
-						<input type="text" class="form-field__input search-task__input" id="search-task-input" placeholder="Search here for a task you are looking for..."/>
+						<input type="text" class="form-field__input search-task__input" id="search-task-input"
+							placeholder="Search here for a task you are looking for..." />
 					</div>
-					<div class="search-button">
-						<button class="button button--medium-dark" id="search-task">Search</button>
-					</div>
+					<!-- <div class="search-button">
+						<button class="button button--medium-dark" id="search-task"> Search</button>
+					</div> -->
 				</div>
 
 				<div id="no-filtered-tasks" class="task-card__no-tasks">
-					<img src="./assets/images/no-task.png" height="200px"/>
+					<img src="./assets/images/no-task.png" height="200px" />
 				</div>
 
 				<table id="tasks" class="task-card__tasks">
@@ -55,14 +63,29 @@
 						<th class="task-card__task-header">Priority</th>
 						<th class="task-card__task-header">Accountable</th>
 						<th class="task-card__task-header">Assigned To</th>
+						<th class="task-card__task-header">Actions</th>
 					</tr>
 				</table>
 			</div>
 		</div>
+
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<h3>Are you sure?</h3>
+
+				<div class="task__buttons">
+					<button type="button" class="button button--medium-dark" id="modal-delete-task">Delete</button>
+					<button type="button" class="button button--dark" id="modal-cancel-task-deletion">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+
 	</main>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script src="./js/list-tasks.js" type="module"></script>
+	<script src="./js/delete-task.js" type="module"></script>
 </body>
 
 </html>

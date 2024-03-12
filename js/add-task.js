@@ -5,7 +5,7 @@ import {
 	validateTaskDescription,
 	validateTaskPriority,
 	validateTaskAccountable,
-	validateTaskResponsible
+	validateTaskResponsible,
 } from "./task.js";
 
 // Function to reset the add task form fields
@@ -25,7 +25,7 @@ $(() => {
 			validateTaskName($("#name").val());
 			$("#name-error").css("display", "none");
 		} catch (error) {
-			$("#name-error").css("display", "block").text(error.message)
+			$("#name-error").css("display", "block").text(error.message);
 		}
 	});
 
@@ -33,9 +33,9 @@ $(() => {
 	$("#description").on("input", () => {
 		try {
 			validateTaskDescription($("#description").val());
-			$("#description-error").css("display", "none").text("")
+			$("#description-error").css("display", "none").text("");
 		} catch (error) {
-			$("#description-error").css("display", "block").text(error.message)
+			$("#description-error").css("display", "block").text(error.message);
 		}
 	});
 
@@ -45,7 +45,7 @@ $(() => {
 			validateTaskPriority($("#priority").val());
 			$("#priority-error").css("display", "none").text("");
 		} catch (error) {
-			$("#priority-error").css("display", "block").text(error.message)
+			$("#priority-error").css("display", "block").text(error.message);
 		}
 	});
 
@@ -55,7 +55,7 @@ $(() => {
 			validateTaskAccountable($("#accountable").val());
 			$("#accountable-error").css("display", "none").text("");
 		} catch (error) {
-			$("#accountable-error").css("display", "block").text(error.message)
+			$("#accountable-error").css("display", "block").text(error.message);
 		}
 	});
 
@@ -82,7 +82,13 @@ $(() => {
 		const accountable = $("#accountable").val();
 		const responsible = $("#responsible").val();
 
-		const task = new Task(name, description, priority, accountable, responsible);
+		const task = new Task(
+			name,
+			description,
+			priority,
+			accountable,
+			responsible
+		);
 
 		let isInvalidAddTaskForm = false;
 
@@ -92,7 +98,7 @@ $(() => {
 			$("#name-error").css("display", "none").text("");
 		} catch (error) {
 			isInvalidAddTaskForm = true;
-			$("#name-error").css("display", "block").text(error.message)
+			$("#name-error").css("display", "block").text(error.message);
 		}
 
 		// Validate task description
@@ -136,6 +142,11 @@ $(() => {
 
 		// Create the task
 		task.create();
+		$("#task_added_msg")
+			.html(`<div class="alert-msg"><p>task added successfully!</p>
+			<a href="./index.html">show added task </a></div>`)
+
+		setInterval(() => { $("#task_added_msg").hide() }, 1000);
 
 		// Reset the add task form fields
 		resetAddTaskForm();
