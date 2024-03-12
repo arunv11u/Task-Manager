@@ -1,3 +1,6 @@
+<!-- Student Name: Arun Varadharajalu
+Student Number: 8896434 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,13 +50,13 @@
 						<input type="text" class="form-field__input search-task__input" id="search-task-input"
 							placeholder="Search here for a task you are looking for..." />
 					</div>
-					<!-- <div class="search-button">
-						<button class="button button--medium-dark" id="search-task"> Search</button>
-					</div> -->
 				</div>
 
 				<div id="no-filtered-tasks" class="task-card__no-tasks">
-					<img src="./assets/images/no-task.png" height="200px" />
+					<div>
+						<img src="./assets/images/no-task.png" height="200px" />
+						<h3>No tasks found.</h3>
+					</div>
 				</div>
 
 				<table id="tasks" class="task-card__tasks">
@@ -68,24 +71,10 @@
 				</table>
 			</div>
 		</div>
-
-		<div class="modal" id="modal">
-			<div class="modal-content">
-				<h3>Are you sure?</h3>
-
-				<div class="task__buttons">
-					<button type="button" class="button button--medium-dark" id="modal-delete-task">Delete</button>
-					<button type="button" class="button button--dark" id="modal-cancel-task-deletion">Cancel</button>
-				</div>
-			</div>
-		</div>
-
-
 	</main>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 	<script src="./js/list-tasks.js" type="module"></script>
-	<script src="./js/delete-task.js" type="module"></script>
 </body>
 
 </html>

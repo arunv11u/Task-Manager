@@ -1,3 +1,12 @@
+// Student Name: Arun Varadharajalu
+// Student Number: 8896434
+
+// Student Name: James Boby Vempala
+// Student Number: 8941304
+
+// Student Name: Fenil Moradiya
+// Student Number: 8941920
+
 // Importing LocalStorage class from local-storage.js
 import { LocalStorage } from "./local-storage.js";
 
