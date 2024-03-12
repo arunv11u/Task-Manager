@@ -1,3 +1,6 @@
+// Student Name: Arun Varadharajalu
+// Student Number: 8896434
+
 // Class for interacting with local storage
 class LocalStorage {
 

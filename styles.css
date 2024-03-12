@@ -1,9 +1,18 @@
+/* Student Name: Arun Varadharajalu
+Student Number: 8896434 */
+
+/* Student Name: James Boby Vempala
+Student Number: 8941304 */
+
+/* Student Name: Fenil Moradiya
+Student Number: 8941920 */
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	task-card__no-tasks font-family: "Roboto", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: 400;
 	background-color: rgb(26 28 32);
 	color: rgb(255, 255, 255);
@@ -148,7 +157,8 @@ body {
 
 .task-card__no-tasks {
 	display: flex;
-	height: 500px;
+	flex-direction: column;
+	height: 400px;
 	align-items: center;
 	justify-content: center;
 }
@@ -208,10 +218,10 @@ body {
 
 /* .task-card__task:nth-child(odd){} */
 
-.task-card__task:hover {
+/* .task-card__task:hover {
 	background-color: #ddd;
 	cursor: pointer;
-}
+} */
 
 .task-card__task-header {
 	padding-top: 12px;
