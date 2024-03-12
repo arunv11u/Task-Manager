@@ -26,7 +26,6 @@
 				<h2 class="task-card__title-heading">Tasks List</h2>
 
 				<div class="task-card__buttons">
-					<!-- <button class="button button--medium-dark button--disabled" disabled>Delete Tasks</button> -->
 					<button class="button button--dark" id="add-task">Add</button>
 				</div>
 			</div>
@@ -36,13 +35,26 @@
 			</div>
 
 			<div class="task-card__tasks-list" id="tasks-list">
+				<div class="search-task">
+					<div class="search-task__field">
+						<input type="text" class="form-field__input search-task__input" id="search-task-input" placeholder="Search here for a task you are looking for..."/>
+					</div>
+					<div class="search-button">
+						<button class="button button--medium-dark" id="search-task">Search</button>
+					</div>
+				</div>
+
+				<div id="no-filtered-tasks" class="task-card__no-tasks">
+					<img src="./assets/images/no-task.png" height="200px"/>
+				</div>
+
 				<table id="tasks" class="task-card__tasks">
 					<tr class="task-card__headers">
 						<th class="task-card__task-header">Name</th>
 						<th class="task-card__task-header">Description</th>
 						<th class="task-card__task-header">Priority</th>
 						<th class="task-card__task-header">Accountable</th>
-						<th class="task-card__task-header">Responsible</th>
+						<th class="task-card__task-header">Assigned To</th>
 					</tr>
 				</table>
 			</div>

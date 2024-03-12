@@ -48,7 +48,7 @@ class Task {
 		return tasks;
 	}
 
-	get(id) {
+	static get(id) {
 		const localStorage = new LocalStorage();
 
 		const tasks = localStorage.getItem(tasksItemName) || [];
@@ -105,7 +105,7 @@ function validateTaskAccountable(accountable) {
 }
 
 function validateTaskResponsible(responsible) {
-	if (!responsible) throw new Error("Responsible is required");
+	if (!responsible) throw new Error("Assigned To is required");
 }
 
 export {
